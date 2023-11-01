@@ -217,24 +217,7 @@ const onBOIOptionChange = (e) => {
                           <div className="modalInner"
 
                           >
-                            <div className="input-container">
-                              <div className="input-box">
-                                <label htmlFor="">10th Percentage</label>
-                                <input type="text" name="tenth_perc"
-                                  required
-                                  onChange={formik.handleChange}
-                                  values={formik.values.tenth_perc}
-                                />
-                              </div>
-                              <div className="input-box">
-                                <label htmlFor="">Twelth Percentage</label>
-                                <input type="text" name="twelth_perc"
-                                  required
-                                  onChange={formik.handleChange}
-                                  values={formik.values.twelth_perc}
-                                />
-                              </div>
-                            </div>                            
+                                                   
 
                             <div className="input-box">
                                 <label htmlFor="">Background</label>
@@ -243,7 +226,45 @@ const onBOIOptionChange = (e) => {
                                     <option value="">Select</option>
                                     {getBackgroundOptions()}
                                 </select>
+                              </div><br/>
+                              <h4>Enter The Marks </h4><br/>
+                              <div className="input-container">
+                  
+                              <div className="input-box">
+                                <label htmlFor="">Biology</label>
+                                <input type="number" name="bio_mark"
+                                  required
+                                  onChange={formik.handleChange}
+                                  values={formik.values.bio_mark}
+                                />
                               </div>
+                              <div className="input-box">
+                                <label htmlFor="">Chemistry</label>
+                                <input type="number" name="che_mark"
+                                  required
+                                  onChange={formik.handleChange}
+                                  values={formik.values.che_mark}
+                                />
+                              </div>
+                            </div>
+                          <div className="input-container">
+                              <div className="input-box">
+                                <label htmlFor="">Physics</label>
+                                <input type="text" name="phy_mark"
+                                  required
+                                  onChange={formik.handleChange}
+                                  values={formik.values.phy_mark}
+                                />
+                              </div>
+                              <div className="input-box">
+                                <label htmlFor="">Maths</label>
+                                <input type="text" name="math_mark"
+                                  required
+                                  onChange={formik.handleChange}
+                                  values={formik.values.math_mark}
+                                />
+                              </div>
+                            </div>          
 
                               <div className="input-box">
                                 <label htmlFor="">Area of Interest</label>
