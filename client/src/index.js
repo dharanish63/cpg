@@ -6,6 +6,7 @@ import Colleges from "./pages/Colleges";
 import Employees from "./pages/Employees";
 import Search from "./pages/Search";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -18,6 +19,7 @@ root.render(
           <Route path="employees" element={<Employees />} />
           <Route path="colleges" element={<Colleges />} />
           <Route path="search" element={<Search />} />
+          <Route path="Login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>

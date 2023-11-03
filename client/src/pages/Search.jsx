@@ -106,8 +106,8 @@ const Employees = ({ setEmployeeId }) => {
       type: "Arts"
     },
     {
-      label: "B.Sc(CS)",
-      value: "Arts_and_Science",
+      label: "B.Sc Computer Science",
+      value: "B.Sc Computer Science",
       type: "Arts"
     },
     {
@@ -128,22 +128,22 @@ const Employees = ({ setEmployeeId }) => {
     }
     ,
     {
-      label: "B.COM(CA)",
+      label: "B.COM Computer Application",
       value: "Arts_and_Science",
       type: "Arts"
     },
     {
-      label: "B.COM(ABA)",
+      label: "B.COM ABA",
       value: "Arts_and_Science",
       type: "Arts"
     },
     {
-      label: "BA(ENGLISH)",
+      label: "BA ENGLISH",
       value: "Arts_and_Science",
       type: "Arts"
     },
     {
-      label: "BA(TAMIL)",
+      label: "BA TAMIL ",
       value: "Arts_and_Science",
       type: "Arts"
     }
@@ -188,7 +188,7 @@ const onBOIOptionChange = (e) => {
         }
         else{
             const filteredCourses = BOIOptions.filter(interest => interest.value === e.target.value);
-        setSelectedBOIOptions(filteredCourses); 
+                    
         }       
       }
     const formik = useFormik({
@@ -209,7 +209,7 @@ const onBOIOptionChange = (e) => {
             <main className="mainContainer">
                 <div className="mainWrapper">
                     <h1>
-                        Search
+                        Register
                     </h1>
                     
                     <form action="" onSubmit={formik.handleSubmit}>
@@ -217,7 +217,16 @@ const onBOIOptionChange = (e) => {
                           <div className="modalInner"
 
                           >
-                                                   
+                            <div className="input-container">
+          <div className="input-box">
+            <label htmlFor="">Name</label>
+            <input type="number" name="che_mark"
+              required
+              onChange={formik.handleChange}
+              values={formik.values.che_mark}
+            />
+          </div>
+          </div>                       
 
                             <div className="input-box">
                                 <label htmlFor="">Background</label>
@@ -228,43 +237,48 @@ const onBOIOptionChange = (e) => {
                                 </select>
                               </div><br/>
                               <h4>Enter The Marks </h4><br/>
-                              <div className="input-container">
+                             
                   
-                              <div className="input-box">
-                                <label htmlFor="">Biology</label>
-                                <input type="number" name="bio_mark"
-                                  required
-                                  onChange={formik.handleChange}
-                                  values={formik.values.bio_mark}
-                                />
-                              </div>
-                              <div className="input-box">
-                                <label htmlFor="">Chemistry</label>
-                                <input type="number" name="che_mark"
-                                  required
-                                  onChange={formik.handleChange}
-                                  values={formik.values.che_mark}
-                                />
-                              </div>
-                            </div>
-                          <div className="input-container">
-                              <div className="input-box">
-                                <label htmlFor="">Physics</label>
-                                <input type="text" name="phy_mark"
-                                  required
-                                  onChange={formik.handleChange}
-                                  values={formik.values.phy_mark}
-                                />
-                              </div>
-                              <div className="input-box">
-                                <label htmlFor="">Maths</label>
-                                <input type="text" name="math_mark"
-                                  required
-                                  onChange={formik.handleChange}
-                                  values={formik.values.math_mark}
-                                />
-                              </div>
-                            </div>          
+             <div className="input-container">                 
+            <div className="input-box">
+            <label htmlFor="">Biology</label>
+            <input type="number" name="bio_mark"
+              required
+              onChange={formik.handleChange}
+              values={formik.values.bio_mark}
+            />
+          </div>
+          </div>
+          <div className="input-container">
+          <div className="input-box">
+            <label htmlFor="">Maths</label>
+            <input type="number" name="bio_mark"
+              required
+              onChange={formik.handleChange}
+              values={formik.values.bio_mark}
+            />
+          </div>
+          </div>
+          <div className="input-container">
+          <div className="input-box">
+            <label htmlFor="">Chemistry</label>
+            <input type="number" name="che_mark"
+              required
+              onChange={formik.handleChange}
+              values={formik.values.che_mark}
+            />
+          </div>
+          </div>
+      <div className="input-container">
+          <div className="input-box">
+            <label htmlFor="">Physics</label>
+            <input type="text" name="phy_mark"
+              required
+              onChange={formik.handleChange}
+              values={formik.values.phy_mark}
+            />
+          </div>
+        </div>
 
                               <div className="input-box">
                                 <label htmlFor="">Area of Interest</label>
@@ -293,7 +307,7 @@ const onBOIOptionChange = (e) => {
                             </div>
                             
                             <div className="modalFooter" style={{ display: 'inline-flex' }}>
-                              <button className="add-btn" type="submit">{loading ? 'Searching...' : 'Search'}</button>
+                              <button className="add-btn" type="submit">{loading ? 'Registering...' :'Register'}</button>
                               &nbsp;&nbsp;
                               <button className="cancel-btn">Reset</button>
                             </div>

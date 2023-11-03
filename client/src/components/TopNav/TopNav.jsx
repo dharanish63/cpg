@@ -10,13 +10,16 @@ const TopNav = () => {
           <NavLink to="/" className={(navData) => (navData.isActive ? "active" : 'none')}>Home</NavLink>
         </li>
         <li>
-          <NavLink to="/search" className={(navData) => (navData.isActive ? "active" : 'none')}>Search</NavLink>
+          <NavLink to="/search" className={(navData) => (navData.isActive ? "active" : 'none')}>Register</NavLink>
         </li>
         <li>
           <NavLink to="/colleges" className={(navData) => (navData.isActive ? "active" : 'none')}>Colleges</NavLink>
         </li>
         <li>
-          <NavLink to="/employees" className={(navData) => (navData.isActive ? "active" : 'none')}>Employees</NavLink>
+          <NavLink to="/employees" className={(navData) => (navData.isActive ? "active" : 'none')}>Candidate</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login" className={(navData) => (navData.isActive ? "active" : 'none')}>Login</NavLink>
         </li>
       </ul>
     </nav>
